@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Înscrieri</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="shortcut icon" href="../Imagini/ico.png" />
+    <script src="../JS/script.js" defer></script>
+</head>
+<body id="booking">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Acasă</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="inscrieri.html" class="active">Înscrieri</a></li>
+                <li><a href="despre.html">Despre salon</a></li>
+                <li><a href="servicii.html">Servicii</a></li>
+                <li><a href="testimoniale.html">Testimoniale</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="booking">
+        <h2>Programează-te acum!</h2>
+        <form id="bookingForm">
+            <!-- Nume -->
+            <label for="firstName">Nume:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Introdu numele" required>
+    
+            <!-- Prenume -->
+            <label for="lastName">Prenume:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Introdu prenumele" required>
+    
+            <!-- Telefon -->
+            <label for="phone">Număr de Telefon:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Ex: 0712345678" pattern="[0-9]{10}" required>
+    
+            <!-- Calendar și Oră -->
+            <label for="appointmentDate">Data Programării:</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+    
+            <label for="appointmentTime">Ora Programării:</label>
+            <select id="appointmentTime" name="appointmentTime" required>
+                <option value="" disabled selected>Alege ora</option>
+                <option value="08:00">08:00</option>
+                <option value="09:30">09:30</option>
+                <option value="11:00">11:00</option>
+                <option value="12:30">12:30</option>
+                <option value="14:00">14:00</option>
+                <option value="15:30">15:30</option>
+            </select>
+    
+            <!-- Butoane -->
+            <div class="form-buttons">
+                <button type="submit">Trimite</button>
+                <button type="reset">Anulează</button>
+            </div>
+        </form>
+    
+        <!-- Nota Bene -->
+        <p class="note">
+            <strong>Notă Bene:</strong> În caz de anulare, vă rugăm să contactați salonul la numărul: 
+            <strong>0777-123-456</strong>.
+        </p>
+    </section>
+    
+    
+
+    <footer>
+        <div>
+            <a href="https://instagram.com" target="_blank" class="sprite instagram"></a>
+            <a href="https://facebook.com" target="_blank" class="sprite facebook"></a>
+            <a href="tel:0777123456" class="sprite phone"></a>
+        </div>
+        <p>Contact: 0777-123-456 | Email: perfectnails@gmail.com</p>
+    </footer>
+    
+</body>
+</html>

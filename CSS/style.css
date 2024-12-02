@@ -1,0 +1,685 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #ffe6f7, #edc6da);
+    color: #333;
+}
+
+/* Responsivitate pentru fundal */
+@media (max-width: 1024px) {
+    body {
+        background-attachment: scroll; /* Evită fixarea fundalului pe dispozitive mici */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Ajustează fundalul pentru ecrane mai mici */
+    }
+}
+
+
+h2 {
+    text-align: center;
+    text-shadow: 5px 5px 5px #4a0521;
+    text-decoration-color: #730a3e;
+}
+/* Header */
+header {
+    position: fixed; /* Fixare în partea de sus */
+    top: 0;
+    left: 0;
+    width: 100%; /* Se extinde pe toată lățimea */
+    z-index: 1000; /* Se asigură că meniul este deasupra altor elemente */
+    background: linear-gradient(90deg, #a60757, #610432);
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+header nav ul li a:hover {
+    background: #4a011f;
+    transform: scale(1.1);
+}
+
+/* Stil pentru secțiunea hero */
+#hero {
+    background: linear-gradient(135deg, #f79fcb, #d4679e);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 5px solid #570326;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1s ease-in-out;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#hero .btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #ffe6f7, #ffcce6);
+    color: #d33c88;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 102, 178, 0.2);
+}
+
+#hero .btn:hover {
+    background: #942a54;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 102, 178, 0.4);
+}
+
+/* Adăugare de animații pentru intrarea textului */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivitate pentru secțiunea hero */
+@media (max-width: 1024px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1.3rem;
+    }
+
+    #hero .btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1.1rem;
+    }
+
+    #hero .btn {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 1.5rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    #hero .btn {
+        font-size: 0.8rem;
+        padding: 6px 15px;
+    }
+}
+/* Stil pentru secțiunea Servicii */
+#services-overview {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ffe6f7, #ffcce6);
+    text-align: center;
+    text-shadow: #340216;
+}
+
+#services-overview h2 {
+    font-size: 2.5rem;
+    color: #a41a5f;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Container pentru fiecare serviciu */
+.service {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.619);
+    padding: 20px;
+    margin: 15px auto;
+    width: calc(33% - 20px);
+    min-height: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px #333;
+}
+
+.service p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 3px #333;
+}
+
+/* Preț */
+.service::after {
+    content: attr(data-price);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+/* Stil adaptat pentru Nota Bene */
+#services-overview .note {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #555;
+    text-align: center;
+    font-style: italic;
+    background: linear-gradient(135deg, #ffe6f7, #ffcce6);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    border: 2px solid #ffcce6;
+}
+
+#services-overview .note strong {
+    color: #620835;
+    font-weight: bold;
+}
+
+
+/* Responsivitate */
+@media (max-width: 1024px) {
+    .service {
+        width: calc(50% - 20px);
+    }
+
+    #services-overview h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .service {
+        width: 100%;
+    }
+
+    #services-overview h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #services-overview h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Stil pentru secțiunea galeriilor */
+main {
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffe6f7, #ffcce6);
+}
+
+main h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #8c104e;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Galeria de imagini */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+}
+
+/* Animație de apariție */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivitate pentru galerie */
+@media (max-width: 1024px) {
+    main h2 {
+        font-size: 2rem;
+    }
+
+    .gallery {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    main h2 {
+        font-size: 1.8rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+/* Footer */
+footer {
+    background: #610432;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+footer .sprite {
+    display: inline-block;
+    width: 96px;
+    height: 96px;
+    background: url('css_sprites.png') no-repeat;
+    transition: transform 0.3s ease;
+}
+
+footer .sprite.instagram { background-position: -126px -10px; }
+footer .sprite.facebook { background-position: -10px -126px; }
+footer .sprite.phone { background-position: -10px -10px; }
+
+/* Secțiuni generale */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Carduri pentru articole */
+article {
+    background: white;
+    border: 2px solid #ffcce6;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33% - 20px);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+article img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+article h3 {
+    font-size: 20px;
+    color: #ff66b2;
+}
+
+article p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Secțiunea booking */
+/* Secțiunea booking */
+#booking {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ffe6f7, #ffcce6);
+    text-align: center;
+}
+
+#booking h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff66b2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Formular */
+form {
+    max-width: 800px; /* Lățime mai mare pentru monitor și tabletă */
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border: 2px solid #ffcce6;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Label-uri */
+form label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ff66b2;
+    text-align: left;
+}
+
+/* Input-uri și select */
+form input, form select {
+    font-size: 1.1rem;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form input:hover, form select:hover {
+    border-color: #ff99cc;
+    background-color: #fff0f6;
+}
+
+form input:focus, form select:focus {
+    border-color: #ff66b2;
+    background-color: #ffe6f7;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 102, 178, 0.5);
+}
+
+/* Butoane */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+form button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 102, 178, 0.2);
+}
+
+form button[type="submit"] {
+    background: linear-gradient(90deg, #ff99cc, #ff66b2);
+    color: white;
+}
+
+form button[type="submit"]:hover {
+    background: #ff4d94;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 102, 178, 0.4);
+}
+
+form button[type="reset"] {
+    background: #ffcce6;
+    color: #ff66b2;
+}
+
+form button[type="reset"]:hover {
+    background: #ff99cc;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 102, 178, 0.3);
+}
+
+/* Nota Bene */
+.note {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #666;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 2px solid #ffcce6;
+    text-align: center;
+    font-style: italic;
+}
+
+.note strong {
+    color: #ff66b2;
+}
+
+/* Responsivitate */
+
+/* Monitor */
+@media (min-width: 1025px) {
+    form {
+        max-width: 900px; /* Formular mai mare pentru monitor */
+    }
+
+    form label {
+        font-size: 1.2rem;
+    }
+
+    form input, form select {
+        font-size: 1.2rem;
+        padding: 14px;
+    }
+
+    form button {
+        font-size: 1.3rem;
+        padding: 14px 40px;
+    }
+}
+
+/* Tabletă */
+@media (max-width: 1024px) {
+    #booking h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        max-width: 700px; /* Formular mai larg pentru tabletă */
+    }
+
+    form label {
+        font-size: 1.1rem;
+    }
+
+    form input, form select {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+
+    form button {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+    }
+}
+
+/* Telefon */
+@media (max-width: 768px) {
+    #booking h2 {
+        font-size: 1.8rem;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    form label {
+        font-size: 1rem;
+    }
+
+    form input, form select {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    form button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+
+/* Testimoniale */
+blockquote {
+    font-style: italic;
+    color: #555;
+    background: #ffe6f7;
+    border-left: 5px solid #ff66b2;
+    margin: 20px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsivitate */
+@media (max-width: 1024px) {
+    article {
+        width: calc(50% - 20px);
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    article {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul li a {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
